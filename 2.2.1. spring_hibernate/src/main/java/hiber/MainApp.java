@@ -21,15 +21,20 @@ public class MainApp {
       User user3 = new User("Ron", "Weasley", "weasley@hogwarts.com");
       User user4 = new User("Remus", "Lupin", "lupin@hogwarts.com");
 
-      Car car1 = new Car("Lightning", 2021, user1);
-      Car car2 = new Car("Nimbus", 1001, user2);
-      Car car3 = new Car("Cleanliness", 7, user3);
-      Car car4 = new Car("Comet", 290, user4);
+      Car car1 = new Car("Lightning", 2021);
+      Car car2 = new Car("Nimbus", 1001);
+      Car car3 = new Car("Cleanliness", 7);
+      Car car4 = new Car("Comet", 290);
 
-      userService.add(user1.setCar(car1).setUser(user1));
-      userService.add(user2.setCar(car2).setUser(user2));
-      userService.add(user3.setCar(car3).setUser(user3));
-      userService.add(user4.setCar(car4).setUser(user4));
+      user1.setCar(car1);
+      user2.setCar(car2);
+      user3.setCar(car3);
+      user4.setCar(car4);
+
+      userService.add(user1);
+      userService.add(user2);
+      userService.add(user3);
+      userService.add(user4);
 
       for (User user : userService.listUsers()) {
          System.out.println(user + " " + user.getCar());
