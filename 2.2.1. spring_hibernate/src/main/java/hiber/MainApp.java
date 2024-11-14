@@ -21,10 +21,10 @@ public class MainApp {
       User user3 = new User("Ron", "Weasley", "weasley@hogwarts.com");
       User user4 = new User("Remus", "Lupin", "lupin@hogwarts.com");
 
-      Car car1 = new Car("Lightning", 2021);
-      Car car2 = new Car("Nimbus", 1001);
-      Car car3 = new Car("Cleanliness", 7);
-      Car car4 = new Car("Comet", 290);
+      Car car1 = new Car("Lightning", 2021, user1);
+      Car car2 = new Car("Nimbus", 1001, user2);
+      Car car3 = new Car("Cleanliness", 7, user3);
+      Car car4 = new Car("Comet", 290, user4);
 
       userService.add(user1.setCar(car1).setUser(user1));
       userService.add(user2.setCar(car2).setUser(user2));

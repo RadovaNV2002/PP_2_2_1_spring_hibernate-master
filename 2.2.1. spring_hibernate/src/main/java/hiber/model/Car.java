@@ -23,9 +23,10 @@ public class Car {
     public Car() {
     }
 
-    public Car(String model, int series) {
+    public Car(String model, int series, User user) {
         this.model = model;
         this.series = series;
+        this.user = user;
     }
 
     public Long getId() {
