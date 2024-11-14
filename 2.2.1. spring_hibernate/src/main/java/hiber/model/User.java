@@ -99,6 +99,10 @@ public class User {
 
    @Override
    public int hashCode() {
-      return Objects.hash(getId(), getFirstName(), getLastName(), getEmail());
+      int result = id != null ? id.hashCode() : 0;
+      result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
+      result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
+      result = 31 * result + (email != null ? email.hashCode() : 0);
+      return result;
    }
 }

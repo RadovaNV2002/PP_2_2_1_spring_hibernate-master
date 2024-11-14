@@ -68,6 +68,10 @@ public class Car {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), model, series);
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (this.model != null ? this.model.hashCode() : 0);
+        result = 31 * result + (this.series != 0 ? this.series : 0);
+        return result;
     }
+
 }
